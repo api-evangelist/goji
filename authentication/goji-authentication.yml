@@ -1,0 +1,42 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.api.goji.investments/
+docs: https://docs.api.goji.investments/
+description: >-
+  Goji Platform API authentication. Production requests are cryptographically
+  signed using an HMAC-SHA256 mechanism; a Basic HTTP API key and password is
+  available for easier prototyping against the sandbox environment. There is no
+  OAuth 2.0 / OpenID Connect surface -- no scopes artifact applies.
+summary:
+  types: [http, hmac]
+  production: hmac-sha256-signed
+  sandbox: http-basic
+schemes:
+- name: hmac
+  type: http
+  scheme: hmac-sha256
+  description: >-
+    Each HTTP request is cryptographically signed with a secret private key
+    known only to the API client and Goji. The canonical string is encrypted
+    with HMAC-SHA256 using the private key, the result is Base64 encoded, then
+    UTF-8 URL encoded, and sent in the Authorization header.
+  headers:
+  - name: Authorization
+    description: The Base64-encoded, URL-encoded HMAC-SHA256 signature of the request.
+  - name: x-nonce
+    description: A unique string for every request; included in the signature string to prevent replay attacks.
+  - name: x-timestamp
+    description: Milliseconds since epoch; included in the signature string to prevent replay attacks.
+  sources: [docs.api.goji.investments]
+- name: basicAuth
+  type: http
+  scheme: basic
+  description: >-
+    A Basic HTTP API key and password available for easier prototyping against
+    the sandbox environment (api-sandbox.goji.investments). Not for production.
+  sources: [docs.api.goji.investments]
+notes: >-
+  Production API calls must be cryptographically signed. The onboarding flow
+  begins by fetching hosted Terms and Conditions (GET /platformApi/terms) and
+  creating an investor (POST /platformApi/investors), which returns a clientId
+  used on all subsequent calls.
