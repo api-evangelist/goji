@@ -1,7 +1,28 @@
 aid: goji
 name: Goji
-description: Goji is a company surfaced as a portfolio company of anthemis and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Goji is a private-fund digitisation platform, part of the Euroclear group and
+  regulated by the UK Financial Conduct Authority. Founded in 2015 and backed by
+  Anthemis, Goji provides end-to-end infrastructure for asset managers, fund
+  administrators and distributors to digitise access to private markets --
+  investor onboarding, KYC/KYB and AML, ISA administration, payments, and debt
+  and equity settlement. Its Platform API exposes investor, payment, settlement,
+  bond and ISA operations over HTTPS with HMAC-signed requests and a webhook
+  event stream, letting distributors offer investors a fully digital investment
+  journey into private market funds.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://goji.investments/hubfs/Goji%20favicon.png
 url: https://raw.githubusercontent.com/api-evangelist/goji/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,12 +32,102 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
-apis: []
+- Fintech
+- Private Markets
+- Investments
+- Funds
+- KYC
+- Payments
+- ISA
+- Settlement
+- Webhooks
+- Euroclear
+apis:
+- aid: goji:goji-platform-api
+  name: Goji Platform API
+  description: >-
+    The Goji Platform API for private-markets investing: create and KYC/KYB
+    investors, open and administer IF ISAs, move funds via investor and manager
+    payment APIs, settle debt and equity investments, manage bond products, and
+    subscribe to platform webhook events. Requests are cryptographically signed
+    with HMAC-SHA256 in production; a Basic-auth sandbox is available for
+    prototyping.
+  image: https://goji.investments/hubfs/Goji%20favicon.png
+  baseURL: https://api.goji.investments
+  humanURL: https://docs.api.goji.investments/
+  tags:
+  - Investors
+  - Payments
+  - Settlement
+  - Bonds
+  - ISA
+  - Webhooks
+  properties:
+  - type: Documentation
+    url: https://docs.api.goji.investments/
+  - type: APIReference
+    url: https://docs.api.goji.investments/
+  - type: Sandbox
+    url: sandbox/goji-sandbox.yml
+  - type: Authentication
+    url: authentication/goji-authentication.yml
+  - type: Webhooks
+    url: asyncapi/goji-webhooks.yml
+common:
+- type: DomainSecurity
+  url: security/goji-domain-security.yml
+- type: DeveloperPortal
+  url: https://developer.docs.goji.investments/
+- type: Documentation
+  url: https://docs.api.goji.investments/
+- type: APIReference
+  url: https://docs.api.goji.investments/
+- type: GettingStarted
+  url: https://docs.api.goji.investments/
+- type: Website
+  url: https://goji.investments
+- type: SignUp
+  url: https://platform.goji.investments/investments/account/register
+- type: Support
+  url: https://goji.investments/contact
+- type: Blog
+  url: https://goji.investments/insights
+- type: TermsOfService
+  url: https://goji.investments/disclosures
+- type: PrivacyPolicy
+  url: https://goji.investments/disclosures
+- type: Authentication
+  url: authentication/goji-authentication.yml
+- type: Conventions
+  url: conventions/goji-conventions.yml
+- type: Idempotency
+  url: conventions/goji-conventions.yml
+- type: Sandbox
+  url: sandbox/goji-sandbox.yml
+- type: Webhooks
+  url: asyncapi/goji-webhooks.yml
+- type: MCPServer
+  url: mcp/goji-mcp.yml
+- type: Conformance
+  url: conformance/goji-conformance.yml
+- type: Lifecycle
+  url: lifecycle/goji-lifecycle.yml
+- type: DataModel
+  url: data-model/goji-data-model.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: LLMsTxt
+  url: llms/goji-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

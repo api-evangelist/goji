@@ -1,0 +1,62 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.api.goji.investments/
+description: >-
+  Cross-cutting request/response conventions that apply across the Goji Platform
+  API: authentication style, idempotency, request tracing, versioning, date
+  formatting, and the resource-path style. Captured from the Goji API reference
+  (docs.api.goji.investments).
+base_url:
+  production: https://api.goji.investments
+  sandbox: https://api-sandbox.goji.investments
+api_style: REST over HTTPS, JSON request and response bodies, resources under /platformApi
+
+authentication:
+  production: HMAC-SHA256 signed requests (x-nonce, x-timestamp, Authorization headers)
+  sandbox: HTTP Basic API key and password
+  detail: authentication/goji-authentication.yml
+  docs: https://docs.api.goji.investments/
+
+idempotency:
+  supported: true
+  mechanism: X-CLIENT-REQUEST-ID request header
+  description: >-
+    Clients supply a unique X-CLIENT-REQUEST-ID on a request so it can be safely
+    retried without creating duplicate side effects (e.g. duplicate investors or
+    payments). The same client request id de-duplicates the operation on Goji's
+    side.
+  docs: https://docs.api.goji.investments/
+
+request_tracing:
+  response_header: X-GOJI-REQUEST-ID
+  description: Every response carries an X-GOJI-REQUEST-ID for correlating and supporting requests.
+
+versioning:
+  scheme: header
+  mechanism: version request header
+  description: The API version is selected via a version request header.
+  detail: lifecycle/goji-lifecycle.yml
+
+date_format:
+  standard: ISO 8601
+  description: All timestamps are formatted and expected in ISO 8601.
+
+client_identity:
+  mechanism: clientId
+  description: >-
+    Creating an investor (POST /platformApi/investors) returns a Goji-generated
+    clientId which identifies the investor on all subsequent calls
+    (KYC, accounts, payments, settlement).
+
+events:
+  mechanism: webhooks
+  detail: asyncapi/goji-webhooks.yml
+  description: >-
+    Many platform events are published and can be consumed as webhooks
+    (e.g. INVESTOR_CREATED, INVESTOR_KYC_STATUS_CHANGE, INVESTMENT_FULFILLED).
+
+cross_links:
+  authentication: authentication/goji-authentication.yml
+  lifecycle: lifecycle/goji-lifecycle.yml
+  webhooks: asyncapi/goji-webhooks.yml
+  data_model: data-model/goji-data-model.yml

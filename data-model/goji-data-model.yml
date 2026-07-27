@@ -1,0 +1,31 @@
+generated: '2026-07-19'
+method: searched
+source: >-
+  Derived from the resource paths and id-reference fields documented in the Goji
+  API reference (docs.api.goji.investments). No OpenAPI is published, so this
+  entity graph is built from the documented /platformApi resources and the
+  clientId / accountType / wallet id references between them. Not fabricated
+  beyond what the reference documents.
+docs: https://docs.api.goji.investments/
+notation: >-
+  relationships use has_one / has_many / belongs_to with the reference field
+  name; direction is from the entity that owns the reference.
+entities:
+  - {name: Investor, key: clientId, domain: core, description: An individual or corporate investor onboarded to the platform.}
+  - {name: KYC, domain: compliance, description: KYC/KYB verification state and documents for an investor.}
+  - {name: Account, key: accountType, domain: accounts, description: An investor account (e.g. IF ISA) that holds a balance.}
+  - {name: BankTransferDetails, domain: payments, description: Bank details for funding an investor account.}
+  - {name: Wallet, key: id, domain: payments, description: A manager wallet used to move and hold funds.}
+  - {name: Investment, domain: investing, description: An investor's investment into a debt or equity product.}
+  - {name: Settlement, domain: settlement, description: Settlement tranches and repayments for investments.}
+  - {name: Bond, domain: bonds, description: A fixed-term/fixed-rate bond product.}
+  - {name: Event, domain: platform, description: A platform event delivered via webhooks.}
+relationships:
+  - {from: Investor, to: KYC, kind: has_one, via: clientId}
+  - {from: Investor, to: Account, kind: has_many, via: clientId}
+  - {from: Investor, to: BankTransferDetails, kind: has_one, via: clientId}
+  - {from: Investor, to: Investment, kind: has_many, via: clientId}
+  - {from: Account, to: Investor, kind: belongs_to, via: clientId}
+  - {from: Investment, to: Settlement, kind: has_many, via: tranche}
+  - {from: Wallet, to: Investor, kind: belongs_to, via: clientId}
+  - {from: Event, to: Investor, kind: belongs_to, via: clientId}

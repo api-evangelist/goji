@@ -1,0 +1,31 @@
+generated: '2026-07-19'
+method: derived
+source: >-
+  Derived from the cross-cutting conventions documented in the Goji API
+  reference (docs.api.goji.investments): HMAC request signing, X-CLIENT-REQUEST-ID
+  idempotency, webhook events, ISO 8601 dates. No published SOC 2 / ISO 27001 /
+  PCI certification page was found for the goji.investments domain, so no
+  Compliance pointer is emitted; Goji is regulated by the UK FCA as part of the
+  Euroclear group but that is a regulatory status, not an API-standard claim.
+standards:
+  - id: hmac-request-signing
+    conforms: true
+    evidence: Production requests signed with HMAC-SHA256 (x-nonce, x-timestamp, Authorization).
+  - id: idempotency
+    conforms: true
+    evidence: X-CLIENT-REQUEST-ID request header de-duplicates retried operations.
+  - id: webhooks
+    conforms: true
+    evidence: Platform events delivered as webhooks (INVESTOR_CREATED, INVESTMENT_FULFILLED, ...).
+  - id: iso8601-dates
+    conforms: true
+    evidence: All timestamps use ISO 8601 formatting.
+  - id: oauth2
+    conforms: false
+    evidence: Authentication is HMAC/Basic; no OAuth 2.0 authorization surface.
+  - id: oidc
+    conforms: false
+    evidence: No /.well-known/openid-configuration discovery on the API host.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: No documented application/problem+json error envelope.

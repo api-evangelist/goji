@@ -1,0 +1,18 @@
+generated: '2026-07-19'
+method: generated
+source: >-
+  Packaged Agent Skill generated from the operations documented in the Goji API
+  reference (docs.api.goji.investments). Goji publishes no OpenAPI, so steps are
+  grounded in documented REST method+path pairs and the captured conventions,
+  authentication and webhook artifacts in this repo. No endpoints invented.
+skills:
+  - file: goji-onboard-investor.md
+    name: Onboard and KYC an investor with Goji
+    api: https://docs.api.goji.investments/
+    operations:
+      - "GET /platformApi/terms"
+      - "POST /platformApi/investors"
+      - "GET /platformApi/investors/{clientId}"
+      - "GET /platformApi/investors/{clientId}/kyc"
+      - "POST /platformApi/investors/{clientId}/kyc/documents"
+      - "POST /platformApi/investors/{clientId}/accounts/ISA"

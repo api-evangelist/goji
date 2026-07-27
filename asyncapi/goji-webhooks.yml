@@ -1,0 +1,42 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.api.goji.investments/
+spec_type: Webhooks
+description: >-
+  The Goji Platform webhook event surface. Goji publishes platform events that
+  clients consume as webhooks to stay in sync with investor, payment, ISA,
+  investment and settlement state changes. Goji does not publish a formal
+  AsyncAPI document; this is a captured catalog of the documented event types
+  (type: Webhooks), not a fabricated AsyncAPI spec. Event names are captured
+  verbatim from the Goji API reference; payload schemas are not reproduced here.
+docs: https://docs.api.goji.investments/
+delivery:
+  transport: HTTPS POST to a client-registered endpoint
+  notes: >-
+    Webhooks are fired whenever specific events occur in the Goji Platform.
+    Batch operations (e.g. repayment distributions) publish BATCH_UPDATE events
+    with a type such as REPAYMENTS to report progress.
+events:
+  investor:
+    - INVESTOR_CREATED
+    - INVESTOR_KYC_STATUS_CHANGE
+    - INVESTOR_FUNDS_RECEIVED
+    - INVESTOR_FUNDS_WITHDRAWN
+  isa:
+    - ISA_PROVISIONALLY_OPENED
+    - ISA_AUTO_REPAIRED
+  investment:
+    - INVESTMENT_QUEUED
+    - INVESTMENT_FULFILLED
+    - INVESTMENT_REPAYMENT_BATCH_COMPLETE
+  wallet_payments:
+    - WALLET_CREATED
+    - WALLET_TRANSFER_UPDATE
+  settlement:
+    - TRADE_SETTLEMENT
+    - DIVIDEND_UPDATE
+  batch:
+    - {name: BATCH_UPDATE, types: [REPAYMENTS]}
+cross_links:
+  conventions: conventions/goji-conventions.yml
+  data_model: data-model/goji-data-model.yml

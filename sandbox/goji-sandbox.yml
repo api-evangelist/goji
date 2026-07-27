@@ -1,0 +1,36 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.api.goji.investments/
+description: >-
+  Goji's sandbox / test surface. Goji separates test and live by environment:
+  the sandbox is a distinct host (api-sandbox.goji.investments) that accepts a
+  simpler Basic HTTP API key and password so developers can prototype before
+  wiring up production HMAC request signing. No public magic test values (test
+  cards / IBANs) are published in the API reference beyond the sandbox host and
+  the hosted Terms endpoint; nothing here is invented.
+docs:
+  - https://docs.api.goji.investments/
+
+modes:
+  - name: sandbox
+    base_url: https://api-sandbox.goji.investments
+    auth: HTTP Basic API key and password (for easier prototyping)
+    notes: >-
+      Isolated test environment. Investors and investments created here do not
+      move real money. Use it to exercise the onboarding, KYC, ISA and
+      settlement flows before switching to production.
+  - name: production
+    base_url: https://api.goji.investments
+    auth: HMAC-SHA256 signed requests (see authentication/goji-authentication.yml)
+
+getting_started:
+  - step: Fetch hosted Terms and Conditions
+    request: GET https://api-sandbox.goji.investments/platformApi/terms
+  - step: Create an investor (returns a clientId used on all subsequent calls)
+    request: POST https://api-sandbox.goji.investments/platformApi/investors
+  - step: Check KYC/KYB status for the investor
+    request: GET https://api-sandbox.goji.investments/platformApi/investors/{clientId}/kyc
+
+cross_links:
+  authentication: authentication/goji-authentication.yml
+  conventions: conventions/goji-conventions.yml

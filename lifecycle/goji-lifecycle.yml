@@ -1,0 +1,22 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.api.goji.investments/
+description: >-
+  Versioning and lifecycle posture for the Goji Platform API, captured from the
+  Goji API reference. No public status page, numeric SLA, or RFC 8594
+  Sunset/Deprecation-header policy was found on the goji.investments developer
+  surface, so no StatusPage or Deprecation pointers are emitted.
+versioning:
+  scheme: header
+  mechanism: version request header
+  docs: https://docs.api.goji.investments/
+  notes: The API version is selected per request via a version header.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: No documented deprecation policy or Sunset/Deprecation header support was found.
+sla:
+  url: null
+  public_uptime_target: null
+status_page: null
+deprecated_operations: []

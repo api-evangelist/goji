@@ -1,0 +1,55 @@
+generated: '2026-07-19'
+method: derived
+status: candidate
+source: >-
+  https://docs.api.goji.investments/ — no official Goji MCP server was found in
+  the docs, npm (@modelcontextprotocol), or MCP registries. This is a CANDIDATE
+  tool list derived from the operations documented in the Goji API reference,
+  one tool per documented operation. Not an authoritative Goji product.
+server:
+  name: goji
+  transport: http
+  url: null
+tools:
+  - name: get_terms
+    description: Fetch the hosted investor Terms and Conditions.
+    source_operation: GET /platformApi/terms
+  - name: create_investor
+    description: Create an investor; returns a clientId used on subsequent calls.
+    source_operation: POST /platformApi/investors
+  - name: get_investor
+    description: Retrieve an investor by clientId.
+    source_operation: GET /platformApi/investors/{clientId}
+  - name: get_investor_kyc
+    description: Retrieve KYC/KYB verification status for an investor.
+    source_operation: GET /platformApi/investors/{clientId}/kyc
+  - name: upload_kyc_document
+    description: Upload a KYC document for an investor.
+    source_operation: POST /platformApi/investors/{clientId}/kyc/documents
+  - name: open_isa_account
+    description: Open an IF ISA account for an investor.
+    source_operation: POST /platformApi/investors/{clientId}/accounts/ISA
+  - name: get_investor_isa
+    description: Retrieve an investor's ISA account details.
+    source_operation: GET /platformApi/investors/{clientId}/isa
+  - name: get_bank_transfer_details
+    description: Get bank transfer details for funding an investor account.
+    source_operation: GET /platformApi/investors/{clientId}/bankTransferDetails
+  - name: create_withdrawal
+    description: Withdraw funds from an investor account.
+    source_operation: POST /platformApi/investors/{clientId}/accounts/{accountType}/withdrawal
+  - name: create_settlement_tranche
+    description: Create a settlement tranche for a debt/equity investment.
+    source_operation: POST /platformApi/settlement/tranche
+  - name: create_settlement_repayment
+    description: Record a repayment against a settlement.
+    source_operation: POST /platformApi/settlement/repayment
+  - name: create_wallet
+    description: Create a manager wallet.
+    source_operation: POST /wallets
+  - name: create_wallet_payment
+    description: Make a payment from a wallet.
+    source_operation: POST /wallets/{id}/payment
+  - name: create_bank_account_details
+    description: Register bank account details.
+    source_operation: POST /platformApi/bankAccountDetails
