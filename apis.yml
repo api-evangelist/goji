@@ -49,12 +49,10 @@ apis:
 - aid: goji:goji-platform-api
   name: Goji Platform API
   description: >-
-    The Goji Platform API for private-markets investing: create and KYC/KYB
-    investors, open and administer IF ISAs, move funds via investor and manager
-    payment APIs, settle debt and equity investments, manage bond products, and
-    subscribe to platform webhook events. Requests are cryptographically signed
-    with HMAC-SHA256 in production; a Basic-auth sandbox is available for
-    prototyping.
+    The Goji Platform API for private-markets investing: create and KYC/KYB investors, open and administer
+    IF ISAs, move funds via investor and manager payment APIs, settle debt and equity investments, manage
+    bond products, and subscribe to platform webhook events. Requests are cryptographically signed with
+    HMAC-SHA256 in production; a Basic-auth sandbox is available for prototyping.
   image: https://goji.investments/hubfs/Goji%20favicon.png
   baseURL: https://api.goji.investments
   humanURL: https://docs.api.goji.investments/
@@ -76,6 +74,16 @@ apis:
     url: authentication/goji-authentication.yml
   - type: Webhooks
     url: asyncapi/goji-webhooks.yml
+- aid: goji:goji-general-api
+  name: Goji General API
+  description: The General API from Goji — 138 operation(s) for general.
+  humanURL: https://docs.api.goji.investments/
+  baseURL: https://api.goji.investments
+  tags:
+  - General
+  properties:
+  - type: OpenAPI
+    url: openapi/goji-general-api-openapi.yml
 common:
 - type: DomainSecurity
   url: security/goji-domain-security.yml

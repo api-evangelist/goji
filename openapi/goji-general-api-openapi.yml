@@ -1,0 +1,2422 @@
+openapi: 3.2.0
+info:
+  title: Goji General API
+  version: derived-2026-08-10
+  description: Derived from Goji's published documentation. Every operation in this document corresponds to a literal HTTP method and path found in that documentation; nothing is inferred. Request and response schemas are NOT described -- only the operations that are demonstrably documented.
+  x-provenance: derived-from-documentation
+  x-source-documentation: https://docs.api.goji.investments/
+  x-documentation-url: https://docs.api.goji.investments/
+  x-derived: '2026-08-10'
+  x-derivation-method: literal METHOD+path extraction from provider documentation; no pattern completion, no inferred operations
+  x-not-a-provider-contract: This is API Evangelist's reading of the documentation, not a contract published or endorsed by the provider.
+servers:
+- url: https://api.goji.investments
+tags:
+- name: General
+paths:
+  /terms:
+    get:
+      summary: Retrieve terms
+      tags:
+      - General
+      operationId: get_terms
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L314
+      x-source-context: <a href="#investors-get-terms" class="toc-h2 toc-link" data-title="GET /terms"><code>GET /terms</code></a>
+    post:
+      summary: Create terms
+      tags:
+      - General
+      operationId: post_terms
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L898
+      x-source-context: <a href="#isa-administration-post-terms" class="toc-h2 toc-link" data-title="POST /terms"><code>POST /terms</code></a>
+  /investorIds:
+    get:
+      summary: Retrieve investorIds
+      tags:
+      - General
+      operationId: get_investorIds
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L317
+      x-source-context: <a href="#investors-get-investorids" class="toc-h2 toc-link" data-title="GET /investorIds"><code>GET /investorIds</code></a>
+  /platformApi/investors:
+    post:
+      summary: Create investors
+      tags:
+      - General
+      operationId: post_platformApi_investors
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L320
+      x-source-context: <a href="#investors-post-platformapi-investors" class="toc-h2 toc-link" data-title="POST /platformApi/investors"><code>POST /platformApi/investors</code></a>
+  /platformApi/investors/{clientId}:
+    get:
+      summary: Retrieve clientId
+      tags:
+      - General
+      operationId: get_platformApi_investors_clientId
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L323
+      x-source-context: <a href="#investors-get-platformapi-investors-clientid" class="toc-h2 toc-link" data-title="GET /platformApi/investors/{clientId}"><code>GET /platformApi/invest
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+    put:
+      summary: Update clientId
+      tags:
+      - General
+      operationId: put_platformApi_investors_clientId
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L326
+      x-source-context: <a href="#investors-put-platformapi-investors-clientid" class="toc-h2 toc-link" data-title="PUT /platformApi/investors/{clientId}"><code>PUT /platformApi/invest
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+  /platformApi/investors/{clientId}/updateInvestmentDeclarationAgreement:
+    put:
+      summary: Update updateInvestmentDeclarationAgreement
+      tags:
+      - General
+      operationId: put_platformApi_investors_clientId_updateInvestmentDeclarati
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L329
+      x-source-context: <a href="#investors-put-platformapi-investors-clientid-updateinvestmentdeclarationagreement" class="toc-h2 toc-link" data-title="PUT /platformApi/investors/{cli
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+  /platformApi/investors/{clientId}/kyc:
+    get:
+      summary: Retrieve kyc
+      tags:
+      - General
+      operationId: get_platformApi_investors_clientId_kyc
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L335
+      x-source-context: <a href="#investors-get-platformapi-investors-clientid-kyc" class="toc-h2 toc-link" data-title="GET /platformApi/investors/{clientId}/kyc"><code>GET /platformAp
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+  /platformApi/investors/{clientId}/kyb:
+    get:
+      summary: Retrieve kyb
+      tags:
+      - General
+      operationId: get_platformApi_investors_clientId_kyb
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L338
+      x-source-context: <a href="#investors-get-platformapi-investors-clientid-kyb" class="toc-h2 toc-link" data-title="GET /platformApi/investors/{clientId}/kyb"><code>GET /platformAp
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+  /platformApi/investors/{clientId}/kyc/documents:
+    post:
+      summary: Create documents
+      tags:
+      - General
+      operationId: post_platformApi_investors_clientId_kyc_documents
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L341
+      x-source-context: <a href="#investors-post-platformapi-investors-clientid-kyc-documents" class="toc-h2 toc-link" data-title="POST /platformApi/investors/{clientId}/kyc/documents"
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+  /reports/investor/kyc:
+    get:
+      summary: Retrieve kyc
+      tags:
+      - General
+      operationId: get_reports_investor_kyc
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L344
+      x-source-context: <a href="#investors-get-reports-investor-kyc" class="toc-h2 toc-link" data-title="GET /reports/investor/kyc"><code>GET /reports/investor/kyc</code></a>
+  /reports/investor/kyb:
+    get:
+      summary: Retrieve kyb
+      tags:
+      - General
+      operationId: get_reports_investor_kyb
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L347
+      x-source-context: <a href="#investors-get-reports-investor-kyb" class="toc-h2 toc-link" data-title="GET /reports/investor/kyb"><code>GET /reports/investor/kyb</code></a>
+  /platformApi/isaDeclaration:
+    get:
+      summary: Retrieve isaDeclaration
+      tags:
+      - General
+      operationId: get_platformApi_isaDeclaration
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L359
+      x-source-context: <a href="#investors-get-platformapi-isadeclaration" class="toc-h2 toc-link" data-title="GET /platformApi/isaDeclaration"><code>GET /platformApi/isaDeclaration</
+  /platformApi/investors/{clientId}/accounts/ISA:
+    post:
+      summary: Create ISA
+      tags:
+      - General
+      operationId: post_platformApi_investors_clientId_accounts_ISA
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L362
+      x-source-context: <a href="#investors-post-platformapi-investors-clientid-accounts-isa" class="toc-h2 toc-link" data-title="POST /platformApi/investors/{clientId}/accounts/ISA"><
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+  /platformApi/investors/{clientId}/isa:
+    get:
+      summary: Retrieve isa
+      tags:
+      - General
+      operationId: get_platformApi_investors_clientId_isa
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L365
+      x-source-context: <a href="#investors-get-platformapi-investors-clientid-isa" class="toc-h2 toc-link" data-title="GET /platformApi/investors/{clientId}/isa"><code>GET /platformAp
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+  /platformApi/investors/{clientId}/isa/subscriptionStatus:
+    get:
+      summary: Retrieve subscriptionStatus
+      tags:
+      - General
+      operationId: get_platformApi_investors_clientId_isa_subscriptionStatus
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L368
+      x-source-context: <a href="#investors-get-platformapi-investors-clientid-isa-subscriptionstatus" class="toc-h2 toc-link" data-title="GET /platformApi/investors/{clientId}/isa/sub
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+  /platformApi/investors/{investorId}/isa/subscriptionStatus:
+    put:
+      summary: Update subscriptionStatus
+      tags:
+      - General
+      operationId: put_platformApi_investors_investorId_isa_subscriptionStatus
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L371
+      x-source-context: <a href="#investors-put-platformapi-investors-investorid-isa-subscriptionstatus" class="toc-h2 toc-link" data-title="PUT /platformApi/investors/{investorId}/isa
+      parameters:
+      - name: investorId
+        in: path
+        required: true
+        schema:
+          type: string
+  /platformApi/investors/{investorId}/isa/declaration/agreement:
+    post:
+      summary: Create agreement
+      tags:
+      - General
+      operationId: post_platformApi_investors_investorId_isa_declaration_agreem
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L374
+      x-source-context: <a href="#investors-post-platformapi-investors-investorid-isa-declaration-agreement" class="toc-h2 toc-link" data-title="POST /platformApi/investors/{investorId
+      parameters:
+      - name: investorId
+        in: path
+        required: true
+        schema:
+          type: string
+  /platformApi/investors/{clientId}/accounts/ISA/transferIn/UI:
+    get:
+      summary: Retrieve UI
+      tags:
+      - General
+      operationId: get_platformApi_investors_clientId_accounts_ISA_transferIn_U
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L377
+      x-source-context: <a href="#investors-get-platformapi-investors-clientid-accounts-isa-transferin-ui" class="toc-h2 toc-link" data-title="GET /platformApi/investors/{clientId}/acc
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+  /platformApi/transferIn/open/summary:
+    get:
+      summary: Retrieve summary
+      tags:
+      - General
+      operationId: get_platformApi_transferIn_open_summary
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L380
+      x-source-context: <a href="#investors-get-platformapi-transferin-open-summary" class="toc-h2 toc-link" data-title="GET /platformApi/transferIn/open/summary"><code>GET /platformAp
+  /platformApi/investors/{clientId}/transferOut:
+    get:
+      summary: Retrieve transferOut
+      tags:
+      - General
+      operationId: get_platformApi_investors_clientId_transferOut
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L383
+      x-source-context: <a href="#investors-get-platformapi-investors-clientid-transferout" class="toc-h2 toc-link" data-title="GET /platformApi/investors/{clientId}/transferOut"><code
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+  /platformApi/investors/{clientId}/transferIn:
+    get:
+      summary: Retrieve transferIn
+      tags:
+      - General
+      operationId: get_platformApi_investors_clientId_transferIn
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L386
+      x-source-context: <a href="#investors-get-platformapi-investors-clientid-transferin" class="toc-h2 toc-link" data-title="GET /platformApi/investors/{clientId}/transferIn"><code>G
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+  /platformApi/investors/{clientId}/transferIn/{transferInId}:
+    get:
+      summary: Retrieve transferInId
+      tags:
+      - General
+      operationId: get_platformApi_investors_clientId_transferIn_transferInId
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L389
+      x-source-context: <a href="#investors-get-platformapi-investors-clientid-transferin-transferinid" class="toc-h2 toc-link" data-title="GET /platformApi/investors/{clientId}/transf
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: transferInId
+        in: path
+        required: true
+        schema:
+          type: string
+  /transferIn/investors/{clientId}/open:
+    get:
+      summary: Retrieve open
+      tags:
+      - General
+      operationId: get_transferIn_investors_clientId_open
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L392
+      x-source-context: <a href="#investors-get-transferin-investors-clientid-open" class="toc-h2 toc-link" data-title="GET /transferIn/investors/{clientId}/open"><code>GET /transferIn
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+  /transferIn/investors/{clientId}/closed:
+    get:
+      summary: Retrieve closed
+      tags:
+      - General
+      operationId: get_transferIn_investors_clientId_closed
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L395
+      x-source-context: <a href="#investors-get-transferin-investors-clientid-closed" class="toc-h2 toc-link" data-title="GET /transferIn/investors/{clientId}/closed"><code>GET /transf
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+  /platformApi/transferIn/deposits/{date}:
+    get:
+      summary: Retrieve date
+      tags:
+      - General
+      operationId: get_platformApi_transferIn_deposits_date
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L398
+      x-source-context: <a href="#investors-get-platformapi-transferin-deposits-date" class="toc-h2 toc-link" data-title="GET /platformApi/transferIn/deposits/{date}"><code>GET /platfo
+      parameters:
+      - name: date
+        in: path
+        required: true
+        schema:
+          type: string
+  /platformApi/transfersOut:
+    get:
+      summary: Retrieve transfersOut
+      tags:
+      - General
+      operationId: get_platformApi_transfersOut
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L401
+      x-source-context: <a href="#investors-get-platformapi-transfersout" class="toc-h2 toc-link" data-title="GET /platformApi/transfersOut"><code>GET /platformApi/transfersOut</code><
+  /platformApi/migrate:
+    post:
+      summary: Create migrate
+      tags:
+      - General
+      operationId: post_platformApi_migrate
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L410
+      x-source-context: <a href="#investors-post-platformapi-migrate" class="toc-h2 toc-link" data-title="POST /platformApi/migrate"><code>POST /platformApi/migrate</code></a>
+  /platformApi/investors/{clientId}/accounts/balances:
+    get:
+      summary: Retrieve balances
+      tags:
+      - General
+      operationId: get_platformApi_investors_clientId_accounts_balances
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L424
+      x-source-context: <a href="#payments-investors-get-platformapi-investors-clientid-accounts-balances" class="toc-h2 toc-link" data-title="GET /platformApi/investors/{clientId}/acc
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+  /platformApi/investors/{clientId}/accounts/balances/{accountType}:
+    get:
+      summary: Retrieve accountType
+      tags:
+      - General
+      operationId: get_platformApi_investors_clientId_accounts_balances_account
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L427
+      x-source-context: <a href="#payments-investors-get-platformapi-investors-clientid-accounts-balances-accounttype" class="toc-h2 toc-link" data-title="GET /platformApi/investors/{c
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: accountType
+        in: path
+        required: true
+        schema:
+          type: string
+  /platformApi/investors/{clientId}/transactions:
+    get:
+      summary: Retrieve transactions
+      tags:
+      - General
+      operationId: get_platformApi_investors_clientId_transactions
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L430
+      x-source-context: <a href="#payments-investors-get-platformapi-investors-clientid-transactions" class="toc-h2 toc-link" data-title="GET /platformApi/investors/{clientId}/transact
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+  /platformApi/investors/{clientId}/bankTransferDetails:
+    get:
+      summary: Retrieve bankTransferDetails
+      tags:
+      - General
+      operationId: get_platformApi_investors_clientId_bankTransferDetails
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L433
+      x-source-context: <a href="#payments-investors-get-platformapi-investors-clientid-banktransferdetails" class="toc-h2 toc-link" data-title="GET /platformApi/investors/{clientId}/b
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+  /platformApi/investors/{clientId}/bankTransferDetails/isa:
+    get:
+      summary: Retrieve isa
+      tags:
+      - General
+      operationId: get_platformApi_investors_clientId_bankTransferDetails_isa
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L436
+      x-source-context: <a href="#payments-investors-get-platformapi-investors-clientid-banktransferdetails-isa" class="toc-h2 toc-link" data-title="GET /platformApi/investors/{clientI
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+  /platformApi/investors/{clientId}/bankDetails:
+    get:
+      summary: Retrieve bankDetails
+      tags:
+      - General
+      operationId: get_platformApi_investors_clientId_bankDetails
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L439
+      x-source-context: <a href="#payments-investors-get-platformapi-investors-clientid-bankdetails" class="toc-h2 toc-link" data-title="GET /platformApi/investors/{clientId}/bankDetai
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+    post:
+      summary: Create bankDetails
+      tags:
+      - General
+      operationId: post_platformApi_investors_clientId_bankDetails
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L442
+      x-source-context: <a href="#payments-investors-post-platformapi-investors-clientid-bankdetails" class="toc-h2 toc-link" data-title="POST /platformApi/investors/{clientId}/bankDet
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+    put:
+      summary: Update bankDetails
+      tags:
+      - General
+      operationId: put_platformApi_investors_clientId_bankDetails
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L445
+      x-source-context: <a href="#payments-investors-put-platformapi-investors-clientid-bankdetails" class="toc-h2 toc-link" data-title="PUT /platformApi/investors/{clientId}/bankDetai
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+  /platformApi/investors/{clientId}/accounts/{accountType}/withdrawal:
+    post:
+      summary: Create withdrawal
+      tags:
+      - General
+      operationId: post_platformApi_investors_clientId_accounts_accountType_wit
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L448
+      x-source-context: <a href="#payments-investors-post-platformapi-investors-clientid-accounts-accounttype-withdrawal" class="toc-h2 toc-link" data-title="POST /platformApi/investor
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: accountType
+        in: path
+        required: true
+        schema:
+          type: string
+  /platformApi/investors/{clientId}/accounts/{accountType}/transfer:
+    post:
+      summary: Create transfer
+      tags:
+      - General
+      operationId: post_platformApi_investors_clientId_accounts_accountType_tra
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L451
+      x-source-context: <a href="#payments-investors-post-platformapi-investors-clientid-accounts-accounttype-transfer" class="toc-h2 toc-link" data-title="POST /platformApi/investors/
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: accountType
+        in: path
+        required: true
+        schema:
+          type: string
+  /test/account/topup:
+    post:
+      summary: Create topup
+      tags:
+      - General
+      operationId: post_test_account_topup
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L454
+      x-source-context: <a href="#payments-investors-post-test-account-topup" class="toc-h2 toc-link" data-title="🧪 POST /test/account/topup"><code>🧪 POST /test/account/topup</code></a
+  /platformApi/investors/{clientId}/fee:
+    post:
+      summary: Create fee
+      tags:
+      - General
+      operationId: post_platformApi_investors_clientId_fee
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L457
+      x-source-context: <a href="#payments-investors-post-platformapi-investors-clientid-fee" class="toc-h2 toc-link" data-title="POST /platformApi/investors/{clientId}/fee"><code>POST
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+  /reports/investor/cash/balance:
+    get:
+      summary: Retrieve balance
+      tags:
+      - General
+      operationId: get_reports_investor_cash_balance
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L460
+      x-source-context: <a href="#payments-investors-get-reports-investor-cash-balance" class="toc-h2 toc-link" data-title="GET /reports/investor/cash/balance"><code>GET /reports/inves
+  /platformApi/bankAccountDetails:
+    get:
+      summary: Retrieve bankAccountDetails
+      tags:
+      - General
+      operationId: get_platformApi_bankAccountDetails
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L474
+      x-source-context: <a href="#payments-manager-get-platformapi-bankaccountdetails" class="toc-h2 toc-link" data-title="GET /platformApi/bankAccountDetails"><code>GET /platformApi/b
+    post:
+      summary: Create bankAccountDetails
+      tags:
+      - General
+      operationId: post_platformApi_bankAccountDetails
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L477
+      x-source-context: <a href="#payments-manager-post-platformapi-bankaccountdetails" class="toc-h2 toc-link" data-title="POST /platformApi/bankAccountDetails"><code>POST /platformAp
+  /platformApi/test/bankAccountDetails/{id}/enable:
+    put:
+      summary: Update enable
+      tags:
+      - General
+      operationId: put_platformApi_test_bankAccountDetails_id_enable
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L480
+      x-source-context: <a href="#payments-manager-put-platformapi-test-bankaccountdetails-id-enable" class="toc-h2 toc-link" data-title="PUT /platformApi/test/bankAccountDetails/{id}/
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+  /platformApi/bankAccountDetails/{id}:
+    get:
+      summary: Retrieve id
+      tags:
+      - General
+      operationId: get_platformApi_bankAccountDetails_id
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L483
+      x-source-context: <a href="#payments-manager-get-platformapi-bankaccountdetails-id" class="toc-h2 toc-link" data-title="GET /platformApi/bankAccountDetails/{id}"><code>GET /platf
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+    put:
+      summary: Update id
+      tags:
+      - General
+      operationId: put_platformApi_bankAccountDetails_id
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L486
+      x-source-context: <a href="#payments-manager-put-platformapi-bankaccountdetails-id" class="toc-h2 toc-link" data-title="PUT /platformApi/bankAccountDetails/{id}"><code>PUT /platf
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+  /companies:
+    post:
+      summary: Create companies
+      tags:
+      - General
+      operationId: post_companies
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L492
+      x-source-context: <a href="#payments-manager-post-companies" class="toc-h2 toc-link" data-title="POST /companies"><code>POST /companies</code></a>
+    get:
+      summary: Retrieve companies
+      tags:
+      - General
+      operationId: get_companies
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L498
+      x-source-context: <a href="#payments-manager-get-companies" class="toc-h2 toc-link" data-title="GET /companies"><code>GET /companies</code></a>
+  /test/companies/{partyId}/enable:
+    put:
+      summary: Update enable
+      tags:
+      - General
+      operationId: put_test_companies_partyId_enable
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L495
+      x-source-context: <a href="#payments-manager-put-test-companies-partyid-enable" class="toc-h2 toc-link" data-title="🧪 PUT /test/companies/{partyId}/enable"><code>🧪 PUT /test/comp
+      parameters:
+      - name: partyId
+        in: path
+        required: true
+        schema:
+          type: string
+  /companies/{id}:
+    get:
+      summary: Retrieve id
+      tags:
+      - General
+      operationId: get_companies_id
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L501
+      x-source-context: <a href="#payments-manager-get-companies-id" class="toc-h2 toc-link" data-title="GET /companies/{id}"><code>GET /companies/{id}</code></a>
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+  /wallets:
+    post:
+      summary: Create wallets
+      tags:
+      - General
+      operationId: post_wallets
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L507
+      x-source-context: <a href="#payments-manager-post-wallets" class="toc-h2 toc-link" data-title="POST /wallets"><code>POST /wallets</code></a>
+    get:
+      summary: Retrieve wallets
+      tags:
+      - General
+      operationId: get_wallets
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L510
+      x-source-context: <a href="#payments-manager-get-wallets" class="toc-h2 toc-link" data-title="GET /wallets"><code>GET /wallets</code></a>
+  /wallets/{id}:
+    get:
+      summary: Retrieve id
+      tags:
+      - General
+      operationId: get_wallets_id
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L513
+      x-source-context: <a href="#payments-manager-get-wallets-id" class="toc-h2 toc-link" data-title="GET /wallets/{id}"><code>GET /wallets/{id}</code></a>
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+  /wallets/{id}/payment:
+    post:
+      summary: Create payment
+      tags:
+      - General
+      operationId: post_wallets_id_payment
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L516
+      x-source-context: <a href="#payments-manager-post-wallets-id-payment" class="toc-h2 toc-link" data-title="POST /wallets/{id}/payment"><code>POST /wallets/{id}/payment</code></a>
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+  /wallets/{id}/transactions/year/{year}/month/{month}:
+    get:
+      summary: Retrieve month
+      tags:
+      - General
+      operationId: get_wallets_id_transactions_year_year_month_month
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L519
+      x-source-context: <a href="#payments-manager-get-wallets-id-transactions-year-year-month-month" class="toc-h2 toc-link" data-title="GET /wallets/{id}/transactions/year/{year}/mon
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: year
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: month
+        in: path
+        required: true
+        schema:
+          type: string
+  /transfers/batch:
+    post:
+      summary: Create batch
+      tags:
+      - General
+      operationId: post_transfers_batch
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L531
+      x-source-context: <a href="#payments-manager-post-transfers-batch" class="toc-h2 toc-link" data-title="POST /transfers/batch"><code>POST /transfers/batch</code></a>
+  /transfers/batch/{batchId}:
+    get:
+      summary: Retrieve batchId
+      tags:
+      - General
+      operationId: get_transfers_batch_batchId
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L534
+      x-source-context: <a href="#payments-manager-get-transfers-batch-batchid" class="toc-h2 toc-link" data-title="GET /transfers/batch/{batchId}"><code>GET /transfers/batch/{batchId}
+      parameters:
+      - name: batchId
+        in: path
+        required: true
+        schema:
+          type: string
+  /platformApi/settlement/product:
+    get:
+      summary: Retrieve product
+      tags:
+      - General
+      operationId: get_platformApi_settlement_product
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L557
+      x-source-context: <a href="#settlement-debt-get-platformapi-settlement-product" class="toc-h2 toc-link" data-title="GET /platformApi/settlement/product"><code>GET /platformApi/se
+    post:
+      summary: Create product
+      tags:
+      - General
+      operationId: post_platformApi_settlement_product
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L560
+      x-source-context: <a href="#settlement-debt-post-platformapi-settlement-product" class="toc-h2 toc-link" data-title="POST /platformApi/settlement/product"><code>POST /platformApi
+  /platformApi/settlement/product/{productId}:
+    put:
+      summary: Update productId
+      tags:
+      - General
+      operationId: put_platformApi_settlement_product_productId
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L563
+      x-source-context: <a href="#settlement-debt-put-platformapi-settlement-product-productid" class="toc-h2 toc-link" data-title="PUT /platformApi/settlement/product/{productId}"><co
+      parameters:
+      - name: productId
+        in: path
+        required: true
+        schema:
+          type: string
+  /platformApi/settlement/payment-destination:
+    get:
+      summary: Retrieve payment destination
+      tags:
+      - General
+      operationId: get_platformApi_settlement_payment_destination
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L566
+      x-source-context: <a href="#settlement-debt-get-platformapi-settlement-payment-destination" class="toc-h2 toc-link" data-title="GET /platformApi/settlement/payment-destination"><
+    post:
+      summary: Create payment destination
+      tags:
+      - General
+      operationId: post_platformApi_settlement_payment_destination
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L569
+      x-source-context: <a href="#settlement-debt-post-platformapi-settlement-payment-destination" class="toc-h2 toc-link" data-title="POST /platformApi/settlement/payment-destination"
+  /platformApi/settlement/payment-destination/{id}:
+    put:
+      summary: Update id
+      tags:
+      - General
+      operationId: put_platformApi_settlement_payment_destination_id
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L572
+      x-source-context: <a href="#settlement-debt-put-platformapi-settlement-payment-destination-id" class="toc-h2 toc-link" data-title="PUT /platformApi/settlement/payment-destination
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+  /platformApi/settlement/tranche:
+    post:
+      summary: Create tranche
+      tags:
+      - General
+      operationId: post_platformApi_settlement_tranche
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L575
+      x-source-context: <a href="#settlement-debt-post-platformapi-settlement-tranche" class="toc-h2 toc-link" data-title="POST /platformApi/settlement/tranche"><code>POST /platformApi
+  /platformApi/settlement/secondary-market:
+    post:
+      summary: Create secondary market
+      tags:
+      - General
+      operationId: post_platformApi_settlement_secondary_market
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L578
+      x-source-context: <a href="#settlement-debt-post-platformapi-settlement-secondary-market" class="toc-h2 toc-link" data-title="POST /platformApi/settlement/secondary-market"><code
+  /platformApi/settlement/repayment/reference:
+    get:
+      summary: Retrieve reference
+      tags:
+      - General
+      operationId: get_platformApi_settlement_repayment_reference
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L581
+      x-source-context: <a href="#settlement-debt-get-platformapi-settlement-repayment-reference" class="toc-h2 toc-link" data-title="GET /platformApi/settlement/repayment/reference"><
+  /platformApi/settlement/repayment:
+    post:
+      summary: Create repayment
+      tags:
+      - General
+      operationId: post_platformApi_settlement_repayment
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L584
+      x-source-context: <a href="#settlement-debt-post-platformapi-settlement-repayment" class="toc-h2 toc-link" data-title="POST /platformApi/settlement/repayment"><code>POST /platfor
+  /platformApi/settlement/investor-repayment:
+    post:
+      summary: Create investor repayment
+      tags:
+      - General
+      operationId: post_platformApi_settlement_investor_repayment
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L587
+      x-source-context: <a href="#settlement-debt-post-platformapi-settlement-investor-repayment" class="toc-h2 toc-link" data-title="POST /platformApi/settlement/investor-repayment"><
+  /investor-repayment:
+    get:
+      summary: Retrieve investor repayment
+      tags:
+      - General
+      operationId: get_investor_repayment
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L590
+      x-source-context: <a href="#settlement-debt-get-investor-repayment" class="toc-h2 toc-link" data-title="GET /investor-repayment"><code>GET /investor-repayment</code></a>
+  /investor-repayment/{repaymentBatchReference}:
+    get:
+      summary: Retrieve repaymentBatchReference
+      tags:
+      - General
+      operationId: get_investor_repayment_repaymentBatchReference
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L593
+      x-source-context: <a href="#settlement-debt-get-investor-repayment-repaymentbatchreference" class="toc-h2 toc-link" data-title="GET /investor-repayment/{repaymentBatchReference}"
+      parameters:
+      - name: repaymentBatchReference
+        in: path
+        required: true
+        schema:
+          type: string
+  /investment/{clientInvestmentId}:
+    get:
+      summary: Retrieve clientInvestmentId
+      tags:
+      - General
+      operationId: get_investment_clientInvestmentId
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L596
+      x-source-context: <a href="#settlement-debt-get-investment-clientinvestmentid" class="toc-h2 toc-link" data-title="GET /investment/{clientInvestmentId}"><code>GET /investment/{cl
+      parameters:
+      - name: clientInvestmentId
+        in: path
+        required: true
+        schema:
+          type: string
+  /client-investment/{clientInvestmentId}:
+    get:
+      summary: Retrieve clientInvestmentId
+      tags:
+      - General
+      operationId: get_client_investment_clientInvestmentId
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L599
+      x-source-context: <a href="#settlement-debt-get-client-investment-clientinvestmentid" class="toc-h2 toc-link" data-title="GET /client-investment/{clientInvestmentId}"><code>GET /
+      parameters:
+      - name: clientInvestmentId
+        in: path
+        required: true
+        schema:
+          type: string
+  /platformApi/settlement/investors/{clientId}/accounts/{accountType}/investments:
+    get:
+      summary: Retrieve investments
+      tags:
+      - General
+      operationId: get_platformApi_settlement_investors_clientId_accounts_accou
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L602
+      x-source-context: <a href="#settlement-debt-get-platformapi-settlement-investors-clientid-accounts-accounttype-investments" class="toc-h2 toc-link" data-title="GET /platformApi/s
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: accountType
+        in: path
+        required: true
+        schema:
+          type: string
+  /platformApi/settlement/write-down:
+    post:
+      summary: Create write down
+      tags:
+      - General
+      operationId: post_platformApi_settlement_write_down
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L605
+      x-source-context: <a href="#settlement-debt-post-platformapi-settlement-write-down" class="toc-h2 toc-link" data-title="POST /platformApi/settlement/write-down"><code>POST /platf
+  /platformApi/settlement/write-down/{batchReference}:
+    get:
+      summary: Retrieve batchReference
+      tags:
+      - General
+      operationId: get_platformApi_settlement_write_down_batchReference
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L608
+      x-source-context: <a href="#settlement-debt-get-platformapi-settlement-write-down-batchreference" class="toc-h2 toc-link" data-title="GET /platformApi/settlement/write-down/{batc
+      parameters:
+      - name: batchReference
+        in: path
+        required: true
+        schema:
+          type: string
+    delete:
+      summary: Delete batchReference
+      tags:
+      - General
+      operationId: delete_platformApi_settlement_write_down_batchReference
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L611
+      x-source-context: <a href="#settlement-debt-delete-platformapi-settlement-write-down-batchreference" class="toc-h2 toc-link" data-title="DELETE /platformApi/settlement/write-down
+      parameters:
+      - name: batchReference
+        in: path
+        required: true
+        schema:
+          type: string
+  /platformApi/settlement/write-down/{batchReference}/{clientWritedownId}:
+    delete:
+      summary: Delete clientWritedownId
+      tags:
+      - General
+      operationId: delete_platformApi_settlement_write_down_batchReference_clie
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L614
+      x-source-context: <a href="#settlement-debt-delete-platformapi-settlement-write-down-batchreference-clientwritedownid" class="toc-h2 toc-link" data-title="DELETE /platformApi/set
+      parameters:
+      - name: batchReference
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: clientWritedownId
+        in: path
+        required: true
+        schema:
+          type: string
+  /instruments:
+    post:
+      summary: Create instruments
+      tags:
+      - General
+      operationId: post_instruments
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L631
+      x-source-context: <a href="#settlement-equity-post-instruments" class="toc-h2 toc-link" data-title="POST /instruments"><code>POST /instruments</code></a>
+  /instruments/{symbol}:
+    get:
+      summary: Retrieve symbol
+      tags:
+      - General
+      operationId: get_instruments_symbol
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L634
+      x-source-context: <a href="#settlement-equity-get-instruments-symbol" class="toc-h2 toc-link" data-title="GET /instruments/{symbol}"><code>GET /instruments/{symbol}</code></a>
+      parameters:
+      - name: symbol
+        in: path
+        required: true
+        schema:
+          type: string
+  /allocations:
+    post:
+      summary: Create allocations
+      tags:
+      - General
+      operationId: post_allocations
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L643
+      x-source-context: <a href="#settlement-equity-post-allocations" class="toc-h2 toc-link" data-title="POST /allocations"><code>POST /allocations</code></a>
+  /allocations/{id}:
+    get:
+      summary: Retrieve id
+      tags:
+      - General
+      operationId: get_allocations_id
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L646
+      x-source-context: <a href="#settlement-equity-get-allocations-id" class="toc-h2 toc-link" data-title="GET /allocations/{id}"><code>GET /allocations/{id}</code></a>
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+  /allocations/test/{id}/approve:
+    put:
+      summary: Update approve
+      tags:
+      - General
+      operationId: put_allocations_test_id_approve
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L649
+      x-source-context: <a href="#settlement-equity-put-allocations-test-id-approve" class="toc-h2 toc-link" data-title="🧪 PUT /allocations/test/{id}/approve"><code>🧪 PUT /allocations/
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+  /allocations/test/{id}/reject:
+    put:
+      summary: Update reject
+      tags:
+      - General
+      operationId: put_allocations_test_id_reject
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L652
+      x-source-context: <a href="#settlement-equity-put-allocations-test-id-reject" class="toc-h2 toc-link" data-title="🧪 PUT /allocations/test/{id}/reject"><code>🧪 PUT /allocations/te
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+  /trades:
+    post:
+      summary: Create trades
+      tags:
+      - General
+      operationId: post_trades
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L664
+      x-source-context: <a href="#settlement-equity-post-trades" class="toc-h2 toc-link" data-title="POST /trades"><code>POST /trades</code></a>
+  /trades/{id}:
+    get:
+      summary: Retrieve id
+      tags:
+      - General
+      operationId: get_trades_id
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L667
+      x-source-context: <a href="#settlement-equity-get-trades-id" class="toc-h2 toc-link" data-title="GET /trades/{id}"><code>GET /trades/{id}</code></a>
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+  /corporate-actions/dividends:
+    post:
+      summary: Create dividends
+      tags:
+      - General
+      operationId: post_corporate_actions_dividends
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L679
+      x-source-context: <a href="#settlement-equity-post-corporate-actions-dividends" class="toc-h2 toc-link" data-title="POST /corporate-actions/dividends"><code>POST /corporate-actio
+  /corporate-actions/dividends/{id}:
+    get:
+      summary: Retrieve id
+      tags:
+      - General
+      operationId: get_corporate_actions_dividends_id
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L682
+      x-source-context: <a href="#settlement-equity-get-corporate-actions-dividends-id" class="toc-h2 toc-link" data-title="GET /corporate-actions/dividends/{id}"><code>GET /corporate-
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+  /instruments/reporting:
+    post:
+      summary: Create reporting
+      tags:
+      - General
+      operationId: post_instruments_reporting
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L694
+      x-source-context: <a href="#settlement-equity-post-instruments-reporting" class="toc-h2 toc-link" data-title="POST /instruments/reporting"><code>POST /instruments/reporting</code
+  /instruments/reporting/{reportId}/{instrumentSymbol}:
+    get:
+      summary: Retrieve instrumentSymbol
+      tags:
+      - General
+      operationId: get_instruments_reporting_reportId_instrumentSymbol
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L697
+      x-source-context: <a href="#settlement-equity-get-instruments-reporting-reportid-instrumentsymbol" class="toc-h2 toc-link" data-title="GET /instruments/reporting/{reportId}/{inst
+      parameters:
+      - name: reportId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: instrumentSymbol
+        in: path
+        required: true
+        schema:
+          type: string
+  /investors/{clientId}/assets:
+    get:
+      summary: Retrieve assets
+      tags:
+      - General
+      operationId: get_investors_clientId_assets
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L706
+      x-source-context: <a href="#settlement-equity-get-investors-clientid-assets" class="toc-h2 toc-link" data-title="GET /investors/{clientId}/assets"><code>GET /investors/{clientId}
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+  /platformApi/bondManagement/product:
+    post:
+      summary: Create product
+      tags:
+      - General
+      operationId: post_platformApi_bondManagement_product
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L723
+      x-source-context: <a href="#bond-management-post-platformapi-bondmanagement-product" class="toc-h2 toc-link" data-title="POST /platformApi/bondManagement/product"><code>POST /pla
+  /platformApi/investments/products:
+    get:
+      summary: Retrieve products
+      tags:
+      - General
+      operationId: get_platformApi_investments_products
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L726
+      x-source-context: <a href="#bond-management-get-platformapi-investments-products" class="toc-h2 toc-link" data-title="GET /platformApi/investments/products"><code>GET /platformAp
+  /platformApi/investors/{clientId}/accounts/{accountType}/investments:
+    post:
+      summary: Create investments
+      tags:
+      - General
+      operationId: post_platformApi_investors_clientId_accounts_accountType_inv
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L729
+      x-source-context: <a href="#bond-management-post-platformapi-investors-clientid-accounts-accounttype-investments" class="toc-h2 toc-link" data-title="POST /platformApi/investors/
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: accountType
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Retrieve investments
+      tags:
+      - General
+      operationId: get_platformApi_investors_clientId_accounts_accountType_inve
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L732
+      x-source-context: <a href="#bond-management-get-platformapi-investors-clientid-accounts-accounttype-investments" class="toc-h2 toc-link" data-title="GET /platformApi/investors/{c
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: accountType
+        in: path
+        required: true
+        schema:
+          type: string
+  /platformApi/test/bondManagement/investmentCycle:
+    post:
+      summary: Create investmentCycle
+      tags:
+      - General
+      operationId: post_platformApi_test_bondManagement_investmentCycle
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L735
+      x-source-context: <a href="#bond-management-post-platformapi-test-bondmanagement-investmentcycle" class="toc-h2 toc-link" data-title="🧪 POST /platformApi/test/bondManagement/inve
+  /platformApi/bondManagement/current:
+    get:
+      summary: Retrieve current
+      tags:
+      - General
+      operationId: get_platformApi_bondManagement_current
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L738
+      x-source-context: <a href="#bond-management-get-platformapi-bondmanagement-current" class="toc-h2 toc-link" data-title="GET /platformApi/bondManagement/current"><code>GET /platfo
+  /platformApi/test/bondManagement/investmentCycle/repaymentsAccrual:
+    post:
+      summary: Create repaymentsAccrual
+      tags:
+      - General
+      operationId: post_platformApi_test_bondManagement_investmentCycle_repayme
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L741
+      x-source-context: <a href="#bond-management-post-platformapi-test-bondmanagement-investmentcycle-repaymentsaccrual" class="toc-h2 toc-link" data-title="🧪 POST /platformApi/test/b
+  /webhooks:
+    post:
+      summary: Create webhooks
+      tags:
+      - General
+      operationId: post_webhooks
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L752
+      x-source-context: <a href="#webhooks-post-webhooks" class="toc-h2 toc-link" data-title="POST /webhooks"><code>POST /webhooks</code></a>
+  /terms/agreement:
+    post:
+      summary: Create agreement
+      tags:
+      - General
+      operationId: post_terms_agreement
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L901
+      x-source-context: <a href="#isa-administration-post-terms-agreement" class="toc-h2 toc-link" data-title="POST /terms/agreement"><code>POST /terms/agreement</code></a>
+  /investors/{clientId}/terms/status:
+    get:
+      summary: Retrieve status
+      tags:
+      - General
+      operationId: get_investors_clientId_terms_status
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L904
+      x-source-context: <a href="#isa-administration-get-investors-clientid-terms-status" class="toc-h2 toc-link" data-title="GET /investors/{clientId}/terms/status"><code>GET /investo
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+  /investors/{clientId}/terms/agreement/token:
+    put:
+      summary: Update token
+      tags:
+      - General
+      operationId: put_investors_clientId_terms_agreement_token
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L907
+      x-source-context: <a href="#isa-administration-put-investors-clientid-terms-agreement-token" class="toc-h2 toc-link" data-title="PUT /investors/{clientId}/terms/agreement/token">
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+  /declaration:
+    get:
+      summary: Retrieve declaration
+      tags:
+      - General
+      operationId: get_declaration
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L910
+      x-source-context: <a href="#isa-administration-get-declaration" class="toc-h2 toc-link" data-title="GET /declaration"><code>GET /declaration</code></a>
+    post:
+      summary: Create declaration
+      tags:
+      - General
+      operationId: post_declaration
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L15933
+      x-source-context: <td>A token returned by POST /declaration to identify that the user has signed the Declaration.</td>
+  /declaration/agreement:
+    post:
+      summary: Create agreement
+      tags:
+      - General
+      operationId: post_declaration_agreement
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L913
+      x-source-context: <a href="#isa-administration-post-declaration-agreement" class="toc-h2 toc-link" data-title="POST /declaration/agreement"><code>POST /declaration/agreement</cod
+  /investors:
+    post:
+      summary: Create investors
+      tags:
+      - General
+      operationId: post_investors
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L916
+      x-source-context: <a href="#isa-administration-post-investors" class="toc-h2 toc-link" data-title="POST /investors"><code>POST /investors</code></a>
+  /investors/validIsaApplication:
+    post:
+      summary: Create general
+      tags:
+      - General
+      operationId: post_investors_validIsaApplication
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L919
+      x-source-context: <a href="#isa-administration-post-investors-validisaapplication" class="toc-h2 toc-link" data-title="POST /investors/validIsaApplication"><code>POST /investors/
+  /investors/{investorId}:
+    get:
+      summary: Retrieve investorId
+      tags:
+      - General
+      operationId: get_investors_investorId
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L922
+      x-source-context: <a href="#isa-administration-get-investors-investorid" class="toc-h2 toc-link" data-title="GET /investors/{investorId}"><code>GET /investors/{investorId}</code>
+      parameters:
+      - name: investorId
+        in: path
+        required: true
+        schema:
+          type: string
+    put:
+      summary: Update investorId
+      tags:
+      - General
+      operationId: put_investors_investorId
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L925
+      x-source-context: <a href="#isa-administration-put-investors-investorid" class="toc-h2 toc-link" data-title="PUT /investors/{investorId}"><code>PUT /investors/{investorId}</code>
+      parameters:
+      - name: investorId
+        in: path
+        required: true
+        schema:
+          type: string
+  /investors/{investorId}/isa:
+    get:
+      summary: Retrieve isa
+      tags:
+      - General
+      operationId: get_investors_investorId_isa
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L928
+      x-source-context: <a href="#isa-administration-get-investors-investorid-isa" class="toc-h2 toc-link" data-title="GET /investors/{investorId}/isa"><code>GET /investors/{investorId
+      parameters:
+      - name: investorId
+        in: path
+        required: true
+        schema:
+          type: string
+  /investors/{investorId}/isa/summary:
+    get:
+      summary: Retrieve summary
+      tags:
+      - General
+      operationId: get_investors_investorId_isa_summary
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L931
+      x-source-context: <a href="#isa-administration-get-investors-investorid-isa-summary" class="toc-h2 toc-link" data-title="GET /investors/{investorId}/isa/summary"><code>GET /inves
+      parameters:
+      - name: investorId
+        in: path
+        required: true
+        schema:
+          type: string
+  /investors/{clientId}/isa/subscriptionStatus:
+    get:
+      summary: Retrieve subscriptionStatus
+      tags:
+      - General
+      operationId: get_investors_clientId_isa_subscriptionStatus
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L940
+      x-source-context: <a href="#isa-administration-get-investors-clientid-isa-subscriptionstatus" class="toc-h2 toc-link" data-title="GET /investors/{clientId}/isa/subscriptionStatus
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+  /investors/{investorId}/isa/status:
+    put:
+      summary: Update status
+      tags:
+      - General
+      operationId: put_investors_investorId_isa_status
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L943
+      x-source-context: <a href="#isa-administration-put-investors-investorid-isa-status" class="toc-h2 toc-link" data-title="PUT /investors/{investorId}/isa/status"><code>PUT /investo
+      parameters:
+      - name: investorId
+        in: path
+        required: true
+        schema:
+          type: string
+  /investors/{clientId}/transferIn/{transferInId}/transferHistory:
+    put:
+      summary: Update transferHistory
+      tags:
+      - General
+      operationId: put_investors_clientId_transferIn_transferInId_transferHisto
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L946
+      x-source-context: <a href="#isa-administration-put-investors-clientid-transferin-transferinid-transferhistory" class="toc-h2 toc-link" data-title="PUT /investors/{clientId}/trans
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: transferInId
+        in: path
+        required: true
+        schema:
+          type: string
+    post:
+      summary: Create transferHistory
+      tags:
+      - General
+      operationId: post_investors_clientId_transferIn_transferInId_transferHist
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L949
+      x-source-context: <a href="#isa-administration-post-investors-clientid-transferin-transferinid-transferhistory" class="toc-h2 toc-link" data-title="POST /investors/{clientId}/tra
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: transferInId
+        in: path
+        required: true
+        schema:
+          type: string
+  /investors/{investorId}/declaration/agreement:
+    post:
+      summary: Create agreement
+      tags:
+      - General
+      operationId: post_investors_investorId_declaration_agreement
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L952
+      x-source-context: <a href="#isa-administration-post-investors-investorid-declaration-agreement" class="toc-h2 toc-link" data-title="POST /investors/{investorId}/declaration/agree
+      parameters:
+      - name: investorId
+        in: path
+        required: true
+        schema:
+          type: string
+  /audit/investors/{investorId}:
+    get:
+      summary: Retrieve investorId
+      tags:
+      - General
+      operationId: get_audit_investors_investorId
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L955
+      x-source-context: <a href="#isa-administration-get-audit-investors-investorid" class="toc-h2 toc-link" data-title="GET /audit/investors/{investorId}"><code>GET /audit/investors/{
+      parameters:
+      - name: investorId
+        in: path
+        required: true
+        schema:
+          type: string
+  /investors/{investorId}/investment:
+    post:
+      summary: Create investment
+      tags:
+      - General
+      operationId: post_investors_investorId_investment
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L958
+      x-source-context: <a href="#isa-administration-post-investors-investorid-investment" class="toc-h2 toc-link" data-title="POST /investors/{investorId}/investment"><code>POST /inve
+      parameters:
+      - name: investorId
+        in: path
+        required: true
+        schema:
+          type: string
+    delete:
+      summary: Delete investment
+      tags:
+      - General
+      operationId: delete_investors_investorId_investment
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L961
+      x-source-context: <a href="#isa-administration-delete-investors-investorid-investment" class="toc-h2 toc-link" data-title="DELETE /investors/{investorId}/investment"><code>DELETE
+      parameters:
+      - name: investorId
+        in: path
+        required: true
+        schema:
+          type: string
+  /investors/{investorId}/investment/{investmentId}:
+    put:
+      summary: Update investmentId
+      tags:
+      - General
+      operationId: put_investors_investorId_investment_investmentId
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L964
+      x-source-context: <a href="#isa-administration-put-investors-investorid-investment-investmentid" class="toc-h2 toc-link" data-title="PUT /investors/{investorId}/investment/{inves
+      parameters:
+      - name: investorId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: investmentId
+        in: path
+        required: true
+        schema:
+          type: string
+  /investors/{investorId}/investment/{investmentId}/repayment:
+    post:
+      summary: Create repayment
+      tags:
+      - General
+      operationId: post_investors_investorId_investment_investmentId_repayment
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L967
+      x-source-context: <a href="#isa-administration-post-investors-investorid-investment-investmentid-repayment" class="toc-h2 toc-link" data-title="POST /investors/{investorId}/inves
+      parameters:
+      - name: investorId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: investmentId
+        in: path
+        required: true
+        schema:
+          type: string
+  /investors/{investorId}/investment/{investmentId}/reinvestment:
+    post:
+      summary: Create reinvestment
+      tags:
+      - General
+      operationId: post_investors_investorId_investment_investmentId_reinvestme
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L970
+      x-source-context: <a href="#isa-administration-post-investors-investorid-investment-investmentid-reinvestment" class="toc-h2 toc-link" data-title="POST /investors/{investorId}/in
+      parameters:
+      - name: investorId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: investmentId
+        in: path
+        required: true
+        schema:
+          type: string
+  /investors/{investorId}/investment/{investmentId}/sale:
+    post:
+      summary: Create sale
+      tags:
+      - General
+      operationId: post_investors_investorId_investment_investmentId_sale
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L973
+      x-source-context: <a href="#isa-administration-post-investors-investorid-investment-investmentid-sale" class="toc-h2 toc-link" data-title="POST /investors/{investorId}/investment
+      parameters:
+      - name: investorId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: investmentId
+        in: path
+        required: true
+        schema:
+          type: string
+  /investors/{investorId}/investment/{investmentId}/writeOff:
+    post:
+      summary: Create writeOff
+      tags:
+      - General
+      operationId: post_investors_investorId_investment_investmentId_writeOff
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L976
+      x-source-context: <a href="#isa-administration-post-investors-investorid-investment-investmentid-writeoff" class="toc-h2 toc-link" data-title="POST /investors/{investorId}/invest
+      parameters:
+      - name: investorId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: investmentId
+        in: path
+        required: true
+        schema:
+          type: string
+  /investors/{investorId}/cash:
+    post:
+      summary: Create cash
+      tags:
+      - General
+      operationId: post_investors_investorId_cash
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L979
+      x-source-context: <a href="#isa-administration-post-investors-investorid-cash" class="toc-h2 toc-link" data-title="POST /investors/{investorId}/cash"><code>POST /investors/{inves
+      parameters:
+      - name: investorId
+        in: path
+        required: true
+        schema:
+          type: string
+    delete:
+      summary: Delete cash
+      tags:
+      - General
+      operationId: delete_investors_investorId_cash
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L982
+      x-source-context: <a href="#isa-administration-delete-investors-investorid-cash" class="toc-h2 toc-link" data-title="DELETE /investors/{investorId}/cash"><code>DELETE /investors/
+      parameters:
+      - name: investorId
+        in: path
+        required: true
+        schema:
+          type: string
+  /investors/{investorId}/cashCorrection:
+    post:
+      summary: Create cashCorrection
+      tags:
+      - General
+      operationId: post_investors_investorId_cashCorrection
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L985
+      x-source-context: <a href="#isa-administration-post-investors-investorid-cashcorrection" class="toc-h2 toc-link" data-title="POST /investors/{investorId}/cashCorrection"><code>PO
+      parameters:
+      - name: investorId
+        in: path
+        required: true
+        schema:
+          type: string
+  /investors/{investorId}/transferIn/{transferInId}/cash:
+    post:
+      summary: Create cash
+      tags:
+      - General
+      operationId: post_investors_investorId_transferIn_transferInId_cash
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L988
+      x-source-context: <a href="#isa-administration-post-investors-investorid-transferin-transferinid-cash" class="toc-h2 toc-link" data-title="POST /investors/{investorId}/transferIn
+      parameters:
+      - name: investorId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: transferInId
+        in: path
+        required: true
+        schema:
+          type: string
+  /investors/{investorId}/transferIn/{transferInId}/residualIncome:
+    post:
+      summary: Create residualIncome
+      tags:
+      - General
+      operationId: post_investors_investorId_transferIn_transferInId_residualIn
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L991
+      x-source-context: <a href="#isa-administration-post-investors-investorid-transferin-transferinid-residualincome" class="toc-h2 toc-link" data-title="POST /investors/{investorId}/
+      parameters:
+      - name: investorId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: transferInId
+        in: path
+        required: true
+        schema:
+          type: string
+  /investors/{investorId}/transferIn/{transferInId}/cash/validation:
+    post:
+      summary: Create general
+      tags:
+      - General
+      operationId: post_investors_investorId_transferIn_transferInId_cash_valid
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L994
+      x-source-context: <a href="#isa-administration-post-investors-investorid-transferin-transferinid-cash-validation" class="toc-h2 toc-link" data-title="POST /investors/{investorId}
+      parameters:
+      - name: investorId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: transferInId
+        in: path
+        required: true
+        schema:
+          type: string
+  /investors/{clientId}/transferInSummary:
+    get:
+      summary: Retrieve transferInSummary
+      tags:
+      - General
+      operationId: get_investors_clientId_transferInSummary
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L997
+      x-source-context: <a href="#isa-administration-get-investors-clientid-transferinsummary" class="toc-h2 toc-link" data-title="GET /investors/{clientId}/transferInSummary"><code>GE
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+  /investors/{clientId}/transferIn/{transferInId}/summary:
+    get:
+      summary: Retrieve summary
+      tags:
+      - General
+      operationId: get_investors_clientId_transferIn_transferInId_summary
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L1000
+      x-source-context: <a href="#isa-administration-get-investors-clientid-transferin-transferinid-summary" class="toc-h2 toc-link" data-title="GET /investors/{clientId}/transferIn/{t
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: transferInId
+        in: path
+        required: true
+        schema:
+          type: string
+  /transferIn/deposits/{date}:
+    get:
+      summary: Retrieve date
+      tags:
+      - General
+      operationId: get_transferIn_deposits_date
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L1003
+      x-source-context: <a href="#isa-administration-get-transferin-deposits-date" class="toc-h2 toc-link" data-title="GET /transferIn/deposits/{date}"><code>GET /transferIn/deposits/{
+      parameters:
+      - name: date
+        in: path
+        required: true
+        schema:
+          type: string
+  /transferIn/open/summary:
+    get:
+      summary: Retrieve summary
+      tags:
+      - General
+      operationId: get_transferIn_open_summary
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L1006
+      x-source-context: <a href="#isa-administration-get-transferin-open-summary" class="toc-h2 toc-link" data-title="GET /transferIn/open/summary"><code>GET /transferIn/open/summary</
+  /isaReconciliation:
+    get:
+      summary: Retrieve isaReconciliation
+      tags:
+      - General
+      operationId: get_isaReconciliation
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L1009
+      x-source-context: <a href="#isa-administration-get-isareconciliation" class="toc-h2 toc-link" data-title="GET /isaReconciliation"><code>GET /isaReconciliation</code></a>
+  /investorReconciliation:
+    get:
+      summary: Retrieve investorReconciliation
+      tags:
+      - General
+      operationId: get_investorReconciliation
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L1012
+      x-source-context: <a href="#isa-administration-get-investorreconciliation" class="toc-h2 toc-link" data-title="GET /investorReconciliation"><code>GET /investorReconciliation</cod
+  /investors/{investorId}/transferIn/uiData:
+    get:
+      summary: Retrieve uiData
+      tags:
+      - General
+      operationId: get_investors_investorId_transferIn_uiData
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L1015
+      x-source-context: <a href="#isa-administration-get-investors-investorid-transferin-uidata" class="toc-h2 toc-link" data-title="GET /investors/{investorId}/transferIn/uiData"><cod
+      parameters:
+      - name: investorId
+        in: path
+        required: true
+        schema:
+          type: string
+  /investors/{investorId}/transferOut:
+    get:
+      summary: Retrieve transferOut
+      tags:
+      - General
+      operationId: get_investors_investorId_transferOut
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L1018
+      x-source-context: <a href="#isa-administration-get-investors-investorid-transferout" class="toc-h2 toc-link" data-title="GET /investors/{investorId}/transferOut"><code>GET /inves
+      parameters:
+      - name: investorId
+        in: path
+        required: true
+        schema:
+          type: string
+  /transfersOut:
+    get:
+      summary: Retrieve transfersOut
+      tags:
+      - General
+      operationId: get_transfersOut
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L1021
+      x-source-context: <a href="#isa-administration-get-transfersout" class="toc-h2 toc-link" data-title="GET /transfersOut"><code>GET /transfersOut</code></a>
+  /investors/{investorId}/transferOut/{transferOutId}/cash:
+    post:
+      summary: Create cash
+      tags:
+      - General
+      operationId: post_investors_investorId_transferOut_transferOutId_cash
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L1024
+      x-source-context: <a href="#isa-administration-post-investors-investorid-transferout-transferoutid-cash" class="toc-h2 toc-link" data-title="POST /investors/{investorId}/transfer
+      parameters:
+      - name: investorId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: transferOutId
+        in: path
+        required: true
+        schema:
+          type: string
+  /investors/{investorId}/transferOut/{transferOutId}/fee:
+    post:
+      summary: Create fee
+      tags:
+      - General
+      operationId: post_investors_investorId_transferOut_transferOutId_fee
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L1027
+      x-source-context: <a href="#isa-administration-post-investors-investorid-transferout-transferoutid-fee" class="toc-h2 toc-link" data-title="POST /investors/{investorId}/transferO
+      parameters:
+      - name: investorId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: transferOutId
+        in: path
+        required: true
+        schema:
+          type: string
+  /user/session/valid:
+    get:
+      summary: Retrieve general
+      tags:
+      - General
+      operationId: get_user_session_valid
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L1219
+      x-source-context: <p><code>GET https://api.gojip2p.com/user/session/valid</code></p>
+  /platformApi/webhooks:
+    post:
+      summary: Create webhooks
+      tags:
+      - General
+      operationId: post_platformApi_webhooks
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L1369
+      x-source-context: <p>You can register a URL to receive webhooks by calling <a href="/#webhooks-post-webhooks">POST https://api-sandbox.goji.investments/platformApi/webhooks</a> w
+  /platformApi/terms:
+    get:
+      summary: Retrieve terms
+      tags:
+      - General
+      operationId: get_platformApi_terms
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L1403
+      x-source-context: <p>Goji supports hosting the Terms and Conditions, retrieved by calling <a href="/#investors-get-terms">GET https://api-sandbox.goji.investments/platformApi/ter
+  /investors/{clientId}/kyc:
+    get:
+      summary: Retrieve kyc
+      tags:
+      - General
+      operationId: get_investors_clientId_kyc
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L1411
+      x-source-context: <p>Once the Investor has been created, a KYC/KYB check is done in the background and the status can be checked by calling <a href="/#investors-get-platformapi-i
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+  /investors/{clientId}/kyb:
+    get:
+      summary: Retrieve kyb
+      tags:
+      - General
+      operationId: get_investors_clientId_kyb
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L1411
+      x-source-context: <p>Once the Investor has been created, a KYC/KYB check is done in the background and the status can be checked by calling <a href="/#investors-get-platformapi-i
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+  /investors/{clientId}/accounts/ISA:
+    post:
+      summary: Create ISA
+      tags:
+      - General
+      operationId: post_investors_clientId_accounts_ISA
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L1818
+      x-source-context: <p>Alternatively, the ISA account can be added later by calling <code>POST /investors/{clientId}/accounts/ISA</code>.</p>
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+  /investors/{clientId}/kyc/documents:
+    post:
+      summary: Create documents
+      tags:
+      - General
+      operationId: post_investors_clientId_kyc_documents
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L1834
+      x-source-context: '<p>When documents are required, identity documents must be uploaded. Supported formats are pdf, png and jpeg. The documents are uploaded as <code>Base64</code> '
+      parameters:
+      - name: clientId
+        in: path
+        required: true
+        schema:
+          type: string
+  /instrument:
+    post:
+      summary: Create instrument
+      tags:
+      - General
+      operationId: post_instrument
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L12186
+      x-source-context: <td>Optional. Fields below detail a <code>FeeSymbol</code> registered at <code>POST /instrument</code>.</td>
+  /bondManagement/current:
+    get:
+      summary: Retrieve current
+      tags:
+      - General
+      operationId: get_bondManagement_current
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L13094
+      x-source-context: <p>The current funds that are due to be sent can be retrieved by calling <code>GET /bondManagement/current</code>.</p>
+  /investors/{investorId}/transferIn/{transferInId}/summary:
+    get:
+      summary: Retrieve summary
+      tags:
+      - General
+      operationId: get_investors_investorId_transferIn_transferInId_summary
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L15027
+      x-source-context: <p>GET /investors/{investorId}/transferIn/{transferInId}/summary</p>
+      parameters:
+      - name: investorId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: transferInId
+        in: path
+        required: true
+        schema:
+          type: string
+  /transferOut/{transferOutId}/cash:
+    post:
+      summary: Create cash
+      tags:
+      - General
+      operationId: post_transferOut_transferOutId_cash
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L15125
+      x-source-context: <p>POST /transferOut/:transferOutId/cash</p>
+      parameters:
+      - name: transferOutId
+        in: path
+        required: true
+        schema:
+          type: string
+  /transferOut/{transferOutId}/fee:
+    post:
+      summary: Create fee
+      tags:
+      - General
+      operationId: post_transferOut_transferOutId_fee
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L15137
+      x-source-context: <p>POST /transferOut/:transferOutId/fee</p>
+      parameters:
+      - name: transferOutId
+        in: path
+        required: true
+        schema:
+          type: string
+  /cash:
+    post:
+      summary: Create cash
+      tags:
+      - General
+      operationId: post_cash
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L15167
+      x-source-context: '<li>On the spouse&#39;s account: <code>POST /cash</code> setting the <code>type</code> to <code>ADDITIONAL_PERMITTED_SUBSCRIPTION</code> with <code>amount.amoun'
+  /investors/{investorId}/investment/{investmentId}/investment:
+    delete:
+      summary: Delete investment
+      tags:
+      - General
+      operationId: delete_investors_investorId_investment_investmentId_investme
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L15301
+      x-source-context: <li>If investments are to be removed from the tax wrapper, call <code>DELETE /investors/{investorId}/investment/{investmentId}/investment</code>. This reduces t
+      parameters:
+      - name: investorId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: investmentId
+        in: path
+        required: true
+        schema:
+          type: string
+  /platformApi/investors/{investorId}/accounts/ISA/transferIn/UI:
+    get:
+      summary: Retrieve UI
+      tags:
+      - General
+      operationId: get_platformApi_investors_investorId_accounts_ISA_transferIn
+      responses:
+        '200':
+          description: Successful response
+      x-source-documentation: https://docs.api.goji.investments/#L23438
+      x-source-context: Please note that this endpoint replaces <code>GET /platformApi/investors/{investorId}/accounts/ISA/transferIn/UI</code>. The behavior remains unchanged.
+      parameters:
+      - name: investorId
+        in: path
+        required: true
+        schema:
+          type: string
