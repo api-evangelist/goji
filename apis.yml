@@ -43,6 +43,18 @@ tags:
 - Payments
 - ISA
 - Settlement
+- Webhook
+- Euroclear
+tags_raw:
+- Company
+- Fintech
+- Private Markets
+- Investments
+- Funds
+- KYC
+- Payments
+- ISA
+- Settlement
 - Webhooks
 - Euroclear
 apis:
@@ -59,6 +71,13 @@ apis:
   baseURL: https://api.goji.investments
   humanURL: https://docs.api.goji.investments/
   tags:
+  - Investors
+  - Payments
+  - Settlement
+  - Bonds
+  - ISA
+  - Webhook
+  tags_raw:
   - Investors
   - Payments
   - Settlement
