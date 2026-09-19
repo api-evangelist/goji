@@ -50,8 +50,8 @@ tags:
 - Company
 - Fintech
 - Private Markets
-- Investments
-- Funds
+- Investment
+- Fund
 - KYC
 - Payments
 - ISA
@@ -84,7 +84,7 @@ apis:
   baseURL: https://api.goji.investments
   humanURL: https://docs.api.goji.investments/
   tags:
-  - Investors
+  - Investor
   - Payments
   - Settlement
   - Bonds
