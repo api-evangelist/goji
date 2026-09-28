@@ -1,0 +1,18 @@
+{
+  "provider": "goji",
+  "sources": [
+    "goji-derived-openapi.yml"
+  ],
+  "outputs": [
+    "goji-general-api-openapi.yml"
+  ],
+  "archived": [
+    "archived openapi/goji-derived-openapi.yml"
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "apis.yml register: written (+1 apis, 2 total)"
+  ],
+  "skipped": []
+}
